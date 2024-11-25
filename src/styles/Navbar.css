@@ -1,0 +1,99 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 15px 20px;
+  background:#f5c518;
+  height:5rem;
+  color: #000;
+}
+
+.nav-logo .brand {
+  height:3rem;
+  
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.1em;
+  color:inherit;
+}
+
+.nav-links a:hover {
+  color: #d98c2a;  /* Lighter Honey Brown */
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  -webkit-tap-highlight-color:transparent;
+  
+}
+.nav-toggle:hover{
+  transition: smooth ;
+}
+
+.nav-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;  /* Dark Honey Brown */
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color: #f5c518;  /* Honey Yellow */
+  color: #4a3d25;  /* Dark Honey Brown */
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer a {
+  color: #d98c2a;  /* Lighter Honey Brown */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Media Query for Hamburger Menu */
+@media (max-width: 768px) {
+  .nav-links {
+    margin:0;
+    background-color: #f5c518;
+    display: none;
+    transition:display 1s ease;
+    position:absolute;
+    top:5rem;
+    left:0;
+    right:0;
+    width:100vw;
+    padding:5vh 0 2vh 0;
+    gap: 10px;
+    flex-direction: column;
+    overflow:hidden;
+  }
+  .nav-links.open {
+  display:flex;
+  
+}
+
+  .nav-links a{
+    padding:5px 0 5px 10vw;
+    font-size:1.2rem;
+    font-weight:bold;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+}
